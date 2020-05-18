@@ -1,0 +1,26 @@
+#mynetwork {
+
+            width: 80%;
+            height: 80%;
+            border: 2px solid lightgray;
+            border-radius: 10px;
+            margin: auto;
+            
+
+        }
+
+body {
+	background: url(https://www.tigergraph.com/wp-content/uploads/2017/09/home-main.jpg); 
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: 'Raleway';
+	
+}
+
+
+.jumbotron {
+    /* This is for ie8 and below */
+   background: rgba(255, 255, 255, 0.5); 
+}

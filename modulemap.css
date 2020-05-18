@@ -1,0 +1,37 @@
+#content {
+	text-align: center;
+	padding-top: 25%;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+				 0px 8px 13px rgba(0,0,0,0.1),
+				 0px 18px 23px rgba(0,0,0,0.1);
+
+
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background: url(https://www.tigergraph.com/wp-content/uploads/2017/09/home-main.jpg); 
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: 'Raleway';
+	color: white;
+
+
+}
+.jumbotron {
+	opacity: 0.5;
+}
+
+h1 {
+	font-weight = 700;
+	font-size: 5em;
+}
+
+hr {
+	width: 400px;
+}

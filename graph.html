@@ -1,0 +1,126 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href = "graph.css">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="mainpage.html">ModuleMapper</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class = "active"><a href="#">About</a></li>
+        <li><a href="#">Map</a></li>
+        <li><a href="#">Timeline</a></li>
+        <li><a href="#">Reccommended Modules</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Register your course <i class="fa fa-user-plus"></i></a></li>
+        <li><a href="loginpage.html">Log-in <i class="fa fa-user"></i></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class = "container">
+    <div class = "jumbotron">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Add module</label>
+            <div class="col-xs-3">
+              <input id="module-label" class = "form-control" type="text" placeholder="CS2030">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type = "button" class="btn btn-default" id="node-add" onclick="addNode();">Add</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">module</label>
+            <div class="col-xs-3">
+              <input id="edge-to" type="text" class= "form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">prerequisite</label>
+            <div class="col-xs-3">
+              <input id="edge-from" type="text" class= "form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type = "button" class="btn btn-default" id="edge-add" onclick="addEdge();">Add</button>
+            </div>
+          </div>
+        </form>        
+<!--         <table class = "table">
+            <tr>
+                <td>
+                    <h4>Adding Modules</h4>
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td><label for="module-label" placeholder = "2030">Module Code</label></td>
+                            <td><input id="module-label" type="text" placeholder="CS2030"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Action</td>
+                            <td>
+                                <button class="btn btn-default" id="node-add" onclick="addNode();">Add</button>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <h4>Adding Prequisites</h4>
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td><label for="edge-from">From</label></td>
+                            <td><input id="edge-from" type="text" value="3"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><label for="edge-to">To</label></td>
+                            <td><input id="edge-to" type="text" value="4"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Action</td>
+                            <td>
+                                <button class="btn btn-default" id="edge-add" onclick="addEdge();">Add</button>
+                                <button id="edge-update" onclick="updateEdge();">Update</button>
+                                <button id="edge-remove" onclick="removeEdge();">Remove</button>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+        </table> -->
+        <div id="mynetwork"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src = "graph.js"></script>
+</body>
+</html>
